@@ -21,14 +21,14 @@ virtualhosts:
     has_scheduled_jobs: true
   cms:
     servernames:
-    - cms.development
+     - cms.development
     run_queue_worker: false
     run_horizon: true
     queue_worker_timeout: 60
     has_scheduled_jobs: true
     
 # MySQL root password
-mysql_root_password: somesecret
+mysql_root_password: root
 
 # List of MySQL databases
 mysql_databases:

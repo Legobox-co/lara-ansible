@@ -1,17 +1,17 @@
 # file: testing
 
 [webservers]
-centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
-ubuntu-test ansible_ssh_host=localhost ansible_ssh_port=2211 ansible_ssh_user=vagrant
+# centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
+ubuntu-test ansible_ssh_host=104.237.133.202 ansible_ssh_port=22 ansible_ssh_user=deployer ansible_python_interpreter=/usr/bin/python3 ansible_sudo_pass=^Deployer
 
 [mysqlservers]
-centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
-ubuntu-test ansible_ssh_host=localhost ansible_ssh_port=2211 ansible_ssh_user=vagrant
+# centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
+ubuntu-test ansible_ssh_host=104.237.133.202 ansible_ssh_port=22 ansible_ssh_user=deployer ansible_python_interpreter=/usr/bin/python3 ansible_sudo_pass=^Deployer
 
 [queueservers]
-centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
-ubuntu-test ansible_ssh_host=localhost ansible_ssh_port=2211 ansible_ssh_user=vagrant
+# centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
+ubuntu-test ansible_ssh_host=104.237.133.202 ansible_ssh_port=22 ansible_ssh_user=deployer ansible_python_interpreter=/usr/bin/python3 ansible_sudo_pass=^Deployer
 
 [elasticsearchservers]
-centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
-ubuntu-test ansible_ssh_host=localhost ansible_ssh_port=2211 ansible_ssh_user=vagrant
+# centos7-test ansible_ssh_host=localhost ansible_ssh_port=2210 ansible_ssh_user=vagrant
+ubuntu-test ansible_ssh_host=104.237.133.202 ansible_ssh_port=22 ansible_ssh_user=deployer ansible_python_interpreter=/usr/bin/python3 ansible_sudo_pass=^Deployer
