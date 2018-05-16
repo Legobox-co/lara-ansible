@@ -1,0 +1,22 @@
+---
+
+- include: git-install.yml
+  tags:
+    - development
+    - git
+    - install
+    - git-install
+
+- include: git-config.yml
+  tags:
+    - development
+    - git
+    - config
+    - git-config
+
+- include: git-manage.yml
+  tags:
+    - development
+    - git
+    - maange
+    - git-manage
