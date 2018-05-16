@@ -17,6 +17,7 @@
     state: present
   tags:
     - yarn-repository-public-key
+	- yarn
 
 - name: repository | add
   apt_repository:
@@ -26,6 +27,7 @@
   with_items: "{{ yarn_repositories }}"
   tags:
     - yarn-repository-add
+	- yarn
 
 - name: install | dependencies
   apt:
@@ -34,3 +36,4 @@
   with_items: "{{ yarn_dependencies }}"
   tags:
     - yarn-install-dependencies
+	- yarn

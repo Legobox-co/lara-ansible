@@ -8,9 +8,9 @@
   shell: easy_install supervisor
   tags: supervisor
 
-- name: configure supervisord
-  shell: /usr/bin/echo_supervisord_conf > {{supervisor.config.file}}
-  tags: supervisor
+# - name: configure supervisord
+#   shell: /usr/bin/echo_supervisord_conf > {{supervisor.config.file}}
+#   tags: supervisor
 
 - name: backup default configuration
   shell: cp {{supervisor.config.file}} {{supervisor.config.default}} creates={{supervisor.config.default}}
@@ -52,7 +52,7 @@
             option={{item.key}}
             value={{item.value}}
             state=present
-  with_dict: supervisor.http
+  with_dict: "{{ supervisor.http }}"
   tags:
       - supervisor-http
       - supervisor
