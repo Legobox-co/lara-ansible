@@ -1,5 +1,5 @@
-# Barn - Ansible playbooks for Laravel applications
-This repository provides Ansible playbook targeted spesifically for Laravel applications. If you are not familiar with Ansible, it is an open-source tool that is most commonly used for provisioning, configuration management and deployment. Together with Ansible and these playbooks you can automate provisioning of your servers and development environment. Please note that Barn is not the designed to handle the actual deployment of the Laravel application. For deployment tools I suggest you checkout [Envoyer](https://envoyer.io/), [Deployer](https://deployer.org) or [Capistrano](http://capistranorb.com/) to name a few. Barn can automatically configures the following:
+# Lara-ansible - Ansible playbooks for Laravel applications
+This repository provides Ansible playbook targeted spesifically for Php applications. If you are not familiar with Ansible, it is an open-source tool that is most commonly used for provisioning, configuration management and deployment. Together with Ansible and these playbooks you can automate provisioning of your servers and development environment. Please note that Barn is not the designed to handle the actual deployment of the Laravel application. For deployment tools I suggest you checkout [Envoyer](https://envoyer.io/), [Deployer](https://deployer.org) or [Capistrano](http://capistranorb.com/) to name a few. This collection automatically configures the following.
 
 * PHP
 * nginx + php-fpm with multiple virtual hosts
@@ -11,15 +11,13 @@ This repository provides Ansible playbook targeted spesifically for Laravel appl
 * elasticsearch
 * Crontab entries for queue workers and scheduled tasks
 * Laravel Horizon
-
-Barn also tries to apply some additional security by setting SELinux mode to enforcing and enabling automatic package updates. 
-
+* Node Js
+* Yarn
+* Supervisor
 ## Getting started
 
 ### Supported distributions
 
-* CentOS 7
-* RedHat (Not tested)
 * Ubuntu Trusty
 * Debian (Not tested)
 
@@ -30,7 +28,7 @@ You can install Ansible by following the [official installation documentation](h
 
 ### Clone the repository
 ```shell
-git clone https://github.com/lasselehtinen/barn.git
+git clone https://github.com/legobox-co/lara-ansible
 ```
 
 ### Configure your inventory files
@@ -135,7 +133,7 @@ ansible-playbook -i inventory/testing site.yml
 
 ## Issues
 
-If you have problems or suggestions, please [open a new issue in GitHub](https://github.com/lasselehtinen/barn/issues). 
+If you have problems or suggestions, please [open a new issue in GitHub](https://github.com/legobox-co/lara-ansible). 
 
 ## License
 
