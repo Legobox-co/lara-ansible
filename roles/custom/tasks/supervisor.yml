@@ -64,7 +64,7 @@
             value="{{item.1.values()[0]}}"
             state=present
   with_subelements:
-      - supervisor.programs
+      - "{{ supervisor.programs }}"
       - values
   when: supervisor.programs is defined
   tags:
@@ -75,7 +75,7 @@
   shell: echo Magic...
   notify:
     - run supervisord
-    - reread supervisord config
+    # - reread supervisord config
     - add programs to process group
     - change supervisord programs states
   tags:
