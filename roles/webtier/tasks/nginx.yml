@@ -1,12 +1,12 @@
 # file: roles/webtier/tasks/nginx.yml
 - name: Install nginx
   tags: nginx
-  yum: name=nginx state=installed
+  yum: name=nginx 
   when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
 
 - name: Install nginx
   tags: nginx
-  apt: name=nginx state=installed
+  apt: name=nginx 
   when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
 
 - name: Make sure nginx is running and is started on boot
@@ -36,6 +36,15 @@
   notify:
     - Restart nginx
 
+- name: Install and setup acl for access controls
+  tags: nginx
+  apt: name=acl
+
+- name: Setup current user as control for var/www
+  shell: setfacl -Rm u:{{ ansible_ssh_user }}:rwx /var/www
+  tags: 
+   - nginx
+   - acl
 - name: Create public directory
   tags: nginx
   file: path=/var/www/{{ item.key }}/public state=directory owner=nginx group=nginx mode=0775
