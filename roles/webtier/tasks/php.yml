@@ -26,6 +26,7 @@
     - php7.2-xml
     - php7.2-mysqlnd
     - php7.2-opcache
+    - php7.2-curl
   when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
 
 - name: Install extra PHP packages
