@@ -135,6 +135,9 @@ ansible-playbook -i inventory/testing site.yml
 
 If you have problems or suggestions, please [open a new issue in GitHub](https://github.com/legobox-co/lara-ansible). 
 
+## Note 
+This project was built off [barns](https://github.com/lasselehtinen/barn) with the aim of extending and customizing for extra instances.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
